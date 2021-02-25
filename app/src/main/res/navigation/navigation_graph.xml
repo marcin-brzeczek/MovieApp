@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/movies">
+
+    <fragment
+        android:id="@+id/movies"
+        android:name="com.challenge.omdb.presentation.movies.MoviesFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movies">
+        <action
+            android:id="@+id/action_movie_details"
+            app:destination="@id/movie_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movie_details"
+        android:name="com.challenge.omdb.presentation.details.MovieDetailsFragment"
+        android:label="Movie Details"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

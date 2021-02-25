@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.challenge.omdb.data.model.Movie" />
+
+        <variable
+            name="onMovieClicked"
+            type="kotlin.jvm.functions.Function1" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/greySecondary"
+        android:elevation="@dimen/default_elevation"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> onMovieClicked.invoke(movie)}"
+        app:cardCornerRadius="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/movie_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                app:image="@{movie.imageUrl}"
+                tools:src="@drawable/ic_movie" />
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@{movie.title}"
+                android:textColor="@color/greySecondary"
+                android:textSize="18sp"
+                tools:text="Simple name"
+
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

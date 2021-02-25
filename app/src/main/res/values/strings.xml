@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+
+    <string name="movies_search_hint">Search movies</string>
+    <string name="movies_title">Movies</string>
+    <string name="movies_reload_button_text">Reload</string>
+
+    <string name="movie_details_score_label">Score</string>
+    <string name="movie_details_reviews_label">Reviews</string>
+
+    <string name="transition_movie_details_image">transition_image</string>
+    <string name="movie_details_popularity_label">Popularity</string>
+    <string name="movie_details_description_label">Description</string>
+    <string name="movie_details_director_label">Director</string>
+    <string name="movie_details_writer_label">Writer</string>
+    <string name="movie_details_actor_label">Actor</string>
+    <string name="movie_details_default_error">Error occurs. Try again later.</string>
+    <string name="movies_details_error_dialog_title">Error</string>
+    <string name="movies_details_error_dialog_confirm_button">OK</string>
+</resources>

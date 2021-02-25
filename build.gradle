@@ -1,0 +1,30 @@
+buildscript {
+    apply from: 'dependencies.gradle'
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$GRADLE_VERSION"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
+        classpath "de.mannodermaus.gradle.plugins:android-junit5:$JUNIT_PLUGIN_VERSION"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$NAVIGATION_PLUGIN_VERSION"
+    }
+    repositories {
+        google()
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
