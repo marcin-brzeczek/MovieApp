@@ -7,12 +7,6 @@ import retrofit2.http.QueryMap
 
 interface MovieApi {
 
-//    Search pagination added: https://www.omdbapi.com/?apikey=b9bd48a6&s=Batman&page=2
-
-    //http://www.omdbapi.com/?apikey=b9bd48a6&s=Marvel&type=movie
-
-    //http://www.omdbapi.com/?apikey=b9bd48a6&i=tt4154664
-
     @GET("/")
     fun searchMovies(
         @QueryMap params: Map<String, String>
